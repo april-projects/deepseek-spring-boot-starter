@@ -1,0 +1,79 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+   http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mobaijun</groupId>
+    <artifactId>deepseek-spring-boot-starter</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>deepseek-spring-boot-starter</name>
+    <url>https://docs.mobaijun.com</url>
+    <!-- sk-80c971f2fa3b49ba909f4bb99d750cde -->
+    <!-- sk-1ee33f08024f40b5b4af9f8d957043d4 -->
+
+    <properties>
+        <spring-boot.version>3.4.1</spring-boot.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <okhttp.version>4.12.0</okhttp.version>
+        <hutool-json.version>5.8.35</hutool-json.version>
+        <lombok.version>1.18.36</lombok.version>
+        <reflections.version>0.10.2</reflections.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <!-- https://central.sonatype.com/artifact/org.springframework.boot/spring-boot-autoconfigure -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${spring-boot.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <!-- https://central.sonatype.com/artifact/org.springframework.boot/spring-boot-configuration-processor -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${spring-boot.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp-sse -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp-sse</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+
+        <!-- util -->
+        <dependency>
+            <!-- https://central.sonatype.com/artifact/cn.hutool/hutool-json -->
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-json</artifactId>
+            <version>${hutool-json.version}</version>
+        </dependency>
+
+        <dependency>
+            <!-- https://central.sonatype.com/artifact/org.projectlombok/lombok -->
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <!-- https://central.sonatype.com/artifact/org.reflections/reflections/overview -->
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>${reflections.version}</version>
+        </dependency>
+    </dependencies>
+</project>
