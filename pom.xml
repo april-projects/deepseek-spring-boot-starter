@@ -11,8 +11,6 @@
 
     <name>deepseek-spring-boot-starter</name>
     <url>https://docs.mobaijun.com</url>
-    <!-- sk-80c971f2fa3b49ba909f4bb99d750cde -->
-    <!-- sk-1ee33f08024f40b5b4af9f8d957043d4 -->
 
     <properties>
         <spring-boot.version>3.4.1</spring-boot.version>
