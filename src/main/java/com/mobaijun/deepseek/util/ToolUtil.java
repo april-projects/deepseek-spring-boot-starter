@@ -72,7 +72,7 @@ public class ToolUtil {
             Object arg = JSONUtil.toBean(argument, functionRequestClass);
 
             // 调用函数
-            Object invoke = apply.invoke(functionClass.newInstance(), arg);
+            Object invoke = apply.invoke(functionClass.getDeclaredConstructor().newInstance(), arg);
 
             // 将返回结果转为JSON字符串
             String response = JSONUtil.toJsonStr(invoke);

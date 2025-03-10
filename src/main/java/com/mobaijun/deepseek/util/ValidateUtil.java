@@ -31,7 +31,7 @@ public class ValidateUtil {
             // 如果参数是“?”或“&”，检查是否需要去掉斜杠
             if (params[i].startsWith("?") || params[i].startsWith("&")) {
                 // 如果sb的末尾是“/”，则删除末尾
-                if (sb.length() > 0 && sb.charAt(sb.length() - 1) == '/') {
+                if (!sb.isEmpty() && sb.charAt(sb.length() - 1) == '/') {
                     sb.deleteCharAt(sb.length() - 1);
                 }
             }
@@ -44,7 +44,7 @@ public class ValidateUtil {
         }
 
         // 去掉最后一个斜杠（如果有的话）
-        if (sb.length() > 0 && sb.charAt(sb.length() - 1) == '/') {
+        if (!sb.isEmpty() && sb.charAt(sb.length() - 1) == '/') {
             sb.deleteCharAt(sb.length() - 1);
         }
         return sb.toString();

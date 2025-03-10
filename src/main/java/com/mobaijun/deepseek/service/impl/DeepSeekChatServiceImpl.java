@@ -46,8 +46,10 @@ import org.springframework.stereotype.Service;
 public class DeepSeekChatServiceImpl implements DeepSeekChatService, ParameterConvert<DeepSeekChatCompletion>, ResultConvert<DeepSeekChatCompletionResponse> {
 
     private final DeepSeekProperties deepSeekProperties;
-    private final OkHttpClient client;
-    private final EventSource.Factory factory;
+
+    private final OkHttpClient client = new OkHttpClient();
+
+    private EventSource.Factory factory;
 
     /**
      * 执行聊天补全请求，并返回结果。
@@ -159,8 +161,8 @@ public class DeepSeekChatServiceImpl implements DeepSeekChatService, ParameterCo
      */
     @Override
     public void chatCompletionStream(String baseUrl, String apiKey, ChatCompletion chatCompletion, SseListener eventSourceListener) {
-        if (baseUrl == null || "".equals(baseUrl)) baseUrl = deepSeekProperties.getBaseUrl();
-        if (apiKey == null || "".equals(apiKey)) apiKey = deepSeekProperties.getApiKey();
+        if (baseUrl == null || baseUrl.isEmpty()) baseUrl = deepSeekProperties.getBaseUrl();
+        if (apiKey == null || apiKey.isEmpty()) apiKey = deepSeekProperties.getApiKey();
         chatCompletion.setStream(true);
 
         // 转换 请求参数

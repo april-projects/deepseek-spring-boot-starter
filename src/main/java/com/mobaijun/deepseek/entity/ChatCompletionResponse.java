@@ -21,6 +21,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ChatCompletionResponse {
+
     /**
      * 该对话的唯一标识符。
      */

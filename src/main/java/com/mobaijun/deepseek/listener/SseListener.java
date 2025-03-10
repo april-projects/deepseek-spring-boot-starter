@@ -34,36 +34,43 @@ public abstract class SseListener extends EventSourceListener {
      */
     @Getter
     private final StringBuilder output = new StringBuilder();
+
     /**
      * 花费token
      */
     @Getter
     private final Usage usage = new Usage();
+
     /**
      * 最终的函数调用参数
      */
     private final StringBuilder argument = new StringBuilder();
+
     /**
      * 流式输出，当前消息的内容(回答消息、函数参数)
      */
     @Getter
     private String currStr = "";
+
     /**
      * 流式输出，当前单条SSE消息对象，即ChatCompletionResponse对象
      */
     @Getter
     private String currData = "";
+
     /**
      * 记录当前所调用函数工具的名称
      */
     @Getter
     private String currToolName = "";
+
     /**
      * 是否显示每个函数调用输出的参数文本
      */
     @Getter
     @Setter
     private boolean showToolArgs = false;
+
     @Setter
     @Getter
     private List<ToolCall> toolCalls = new ArrayList<>();
@@ -71,10 +78,13 @@ public abstract class SseListener extends EventSourceListener {
     @Setter
     @Getter
     private ToolCall toolCall;
+
     @Getter
     private CountDownLatch countDownLatch = new CountDownLatch(1);
+
     @Getter
     private String finishReason = null;
+
     private boolean ollamaToolCall = false;
 
     protected abstract void send();
