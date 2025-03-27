@@ -6,7 +6,7 @@
 
     <groupId>com.mobaijun</groupId>
     <artifactId>deepseek-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>deepseek-spring-boot-starter</name>
